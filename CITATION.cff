@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below, together with the RISB method papers listed in the README."
+title: "risb-wannier: rotationally invariant slave-boson solver on Wannier90 Hamiltonians"
+authors:
+  - family-names: Shukla
+    given-names: Gokaran
+    affiliation: "King Abdullah University of Science and Technology (KAUST)"
+version: 1.2.0
+date-released: 2026-11-11
+license: MIT
+repository-code: "https://github.com/Gokaran-Shukla/risb-wannier"
+keywords:
+  - rotationally invariant slave bosons
+  - Gutzwiller approximation
+  - DFT+RISB
+  - Wannier90
+  - strongly correlated electrons

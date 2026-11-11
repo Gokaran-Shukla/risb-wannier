@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "risb-wannier"
+version = "1.2.0"
+description = "Rotationally invariant slave-boson (RISB) / multi-orbital Gutzwiller solver on Wannier90 Hamiltonians, with approximate charge self-consistency"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Gokaran Shukla"}]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.22", "scipy>=1.8"]
+keywords = ["RISB", "Gutzwiller", "slave boson", "DFT+RISB", "Wannier90", "strongly correlated electrons"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Intended Audience :: Science/Research",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib"]
+test = ["pytest"]
+
+[project.scripts]
+risb-wannier = "risb_wannier:main"
+
+[project.urls]
+Homepage = "https://github.com/Gokaran-Shukla/risb-wannier"
+Issues = "https://github.com/Gokaran-Shukla/risb-wannier/issues"
+
+[tool.setuptools]
+py-modules = ["risb_wannier"]

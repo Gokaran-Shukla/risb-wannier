@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+magex_results/
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+.DS_Store
+risb_out/
+*.npz

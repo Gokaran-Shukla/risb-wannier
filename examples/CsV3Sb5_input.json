@@ -1,0 +1,182 @@
+{
+  "_note_1": "Template for CsV3Sb5. Replace orbital indices with the positions of the V-d Wannier functions in YOUR wannier90_hr.dat (0-based), and fermi_energy with the DFT Fermi level used for the Wannierisation.",
+  "_note_2": "Class labels reproduce ComRISB's impurity_problem_equivalence = [1, 2, 2]: V1 alone, V2 = V3 share parameters. For the pristine P6/mmm structure all three V are equivalent; then give all three the same class.",
+  "_note_3": "basis 'cf' rotates each V-d shell to the eigenbasis of its own local Hamiltonian, so symmetry-equivalent V sites with different orbital orientations share parameters. structure 'auto' detects the symmetry-allowed R/Lambda pattern from the data (in D2h: dz2 and dx2-y2 are both Ag and may mix). Check 'ansatz_residual' in results.json.",
+  "_note_4": "charge_feedback: V_H is the screened Hartree+xc response dε/dN of each shell; best taken from a Cococcioni-de Gironcoli linear-response calculation (U_LR) for V-d and Sb-p. Values below are placeholders. Remove all 'feedback' entries and the charge_feedback block for one-shot DFT+RISB.",
+  "_note_5": "Sb-p orbital indices below are placeholders: list ALL Sb-p WFs of your hr.dat (0-based).",
+  "hr_file": "wannier90_hr.dat",
+  "n_procs": 40,
+  "spin_mode": "paramagnetic",
+  "kmesh": [
+    18,
+    18,
+    10
+  ],
+  "temperature": 0.005,
+  "fermi_energy": 5.0,
+  "impurities": [
+    {
+      "name": "V1",
+      "orbitals": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "class": "Va"
+    },
+    {
+      "name": "V2",
+      "orbitals": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "class": "Vb"
+    },
+    {
+      "name": "V3",
+      "orbitals": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "class": "Vb"
+    }
+  ],
+  "classes": {
+    "Va": {
+      "interaction": {
+        "type": "kanamori",
+        "U": 3.0,
+        "J": 0.6
+      },
+      "dc": {
+        "type": "fll",
+        "n": "self_consistent"
+      },
+      "basis": "cf",
+      "structure": "auto",
+      "feedback": {
+        "V_H": 2.0,
+        "V_orb": 0.0
+      }
+    },
+    "Vb": {
+      "interaction": {
+        "type": "kanamori",
+        "U": 3.0,
+        "J": 0.6
+      },
+      "dc": {
+        "type": "fll",
+        "n": "self_consistent"
+      },
+      "basis": "cf",
+      "structure": "auto",
+      "feedback": {
+        "V_H": 2.0,
+        "V_orb": 0.0
+      }
+    }
+  },
+  "charge_feedback": {
+    "ligands": [
+      {
+        "name": "Sb_p",
+        "orbitals": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "V_H": 1.0
+      }
+    ],
+    "mixing": 0.5,
+    "history": 5,
+    "tol": 1e-05,
+    "max_iter": 60
+  },
+  "solver": {
+    "method": "hybr",
+    "tol": 1e-09,
+    "interaction_ramp": 5,
+    "accept": 1e-06
+  },
+  "kpath": {
+    "points": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.5,
+        0,
+        0
+      ],
+      [
+        0.3333333333,
+        0.3333333333,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0.5
+      ]
+    ],
+    "labels": [
+      "Γ",
+      "M",
+      "K",
+      "Γ",
+      "A"
+    ],
+    "npts": 60,
+    "reciprocal_lattice": [
+      [
+        1.0,
+        0.5773503,
+        0.0
+      ],
+      [
+        0.0,
+        1.1547005,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.5897
+      ]
+    ],
+    "ylim": [
+      -1.5,
+      1.5
+    ]
+  },
+  "output_dir": "risb_CsV3Sb5_U3.0_J0.6"
+}
