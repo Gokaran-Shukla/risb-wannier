@@ -1,17 +1,50 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below, together with the RISB method papers listed in the README."
-title: "risb-wannier: rotationally invariant slave-boson solver on Wannier90 Hamiltonians"
+title: "risb-wannier: rotationally invariant slave-boson solver for Wannier90 Hamiltonians"
+abstract: >-
+  risb-wannier solves the rotationally invariant slave-boson (multi-orbital Gutzwiller)
+  saddle-point equations in the embedding formulation for multi-orbital Hubbard models whose
+  one-body part is read directly from wannier90_hr.dat (VASP, Quantum ESPRESSO), spinless or
+  with spin-orbit coupling. It supports Kanamori, Slater-Condon and arbitrary U_ijkl
+  interactions, fully localised-limit double counting, symmetry-adapted R and Lambda, exact-
+  diagonalisation embedding, interaction-ramp continuation, one-shot DFT+RISB and a linearised
+  charge self-consistency loop, with multi-core parallelism and benchmark checks.
+type: software
 authors:
   - family-names: Shukla
     given-names: Gokaran
+    orcid: "https://orcid.org/0000-0001-9332-3332"
     affiliation: "King Abdullah University of Science and Technology (KAUST)"
+    email: gokaran.shukla@kaust.edu.sa
+repository-code: "https://github.com/Gokaran-Shukla/risb-wannier"
+license: MIT
 version: 1.2.0
 date-released: 2026-11-11
-license: MIT
-repository-code: "https://github.com/Gokaran-Shukla/risb-wannier"
 keywords:
-  - rotationally invariant slave bosons
-  - Gutzwiller approximation
-  - DFT+RISB
-  - Wannier90
-  - strongly correlated electrons
+  - "slave bosons"
+  - "Gutzwiller approximation"
+  - "RISB"
+  - "strongly correlated electrons"
+  - "DFT+RISB"
+  - "Hubbard model"
+  - "Wannier90"
+  - "Mott transition"
+references:
+  - type: article
+    authors:
+      - family-names: "Lanatà"
+        given-names: Nicola
+      - family-names: Yao
+        given-names: Yongxin
+      - family-names: Wang
+        given-names: Cai-Zhuang
+      - family-names: Ho
+        given-names: Kai-Ming
+      - family-names: Kotliar
+        given-names: Gabriel
+    title: "Phase diagram and electronic structure of praseodymium and plutonium"
+    journal: "Physical Review X"
+    volume: 5
+    start: "011008"
+    year: 2015
+    doi: "10.1103/PhysRevX.5.011008"

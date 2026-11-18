@@ -1,0 +1,30 @@
+{
+  "title": "risb-wannier: rotationally invariant slave-boson solver for Wannier90 Hamiltonians",
+  "upload_type": "software",
+  "description": "risb-wannier solves the rotationally invariant slave-boson (multi-orbital Gutzwiller) saddle-point equations in the embedding formulation for multi-orbital Hubbard models whose one-body part is read directly from wannier90_hr.dat (VASP, Quantum ESPRESSO), spinless or with spin-orbit coupling. It supports Kanamori, Slater-Condon and arbitrary U_ijkl interactions, fully localised-limit double counting, symmetry-adapted R and Lambda, exact-diagonalisation embedding, interaction-ramp continuation, one-shot DFT+RISB and a linearised charge self-consistency loop, with multi-core parallelism and benchmark checks.",
+  "creators": [
+    {
+      "name": "Shukla, Gokaran",
+      "orcid": "0000-0001-9332-3332",
+      "affiliation": "King Abdullah University of Science and Technology (KAUST)"
+    }
+  ],
+  "keywords": [
+    "slave bosons",
+    "Gutzwiller approximation",
+    "RISB",
+    "strongly correlated electrons",
+    "DFT+RISB",
+    "Hubbard model",
+    "Wannier90",
+    "Mott transition"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Gokaran-Shukla/risb-wannier",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "license": "MIT"
+}
