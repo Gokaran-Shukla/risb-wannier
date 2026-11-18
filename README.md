@@ -3,6 +3,7 @@
 **Rotationally invariant slave-boson (RISB) / multi-orbital Gutzwiller solver on Wannier90 Hamiltonians,
 with approximate charge self-consistency and multi-core parallelism. Pure Python (NumPy + SciPy).**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24334732.svg)](https://doi.org/10.5281/zenodo.24334732)
 [![tests](https://github.com/Gokaran-Shukla/risb-wannier/actions/workflows/tests.yml/badge.svg)](https://github.com/Gokaran-Shukla/risb-wannier/actions/workflows/tests.yml)
 ![python](https://img.shields.io/badge/python-3.10%E2%80%933.13-blue)
 ![license](https://img.shields.io/badge/license-MIT-green)
@@ -245,7 +246,23 @@ two embedding diagonalizations per residual call dominate (~1 s each), not the k
 
 ## Citing
 
-If you use risb-wannier, please cite this repository (see [`CITATION.cff`](CITATION.cff)) and the method papers:
+If risb-wannier helps your work, please cite the software:
+
+> G. Shukla, *risb-wannier: rotationally invariant slave-boson solver for Wannier90 Hamiltonians*, version 1.2.0 (2026). Zenodo. https://doi.org/10.5281/zenodo.24334732
+
+```bibtex
+@software{shukla_risbwannier_2026,
+  author    = {Shukla, Gokaran},
+  title     = {risb-wannier: rotationally invariant slave-boson solver for Wannier90 Hamiltonians},
+  version   = {1.2.0},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.24334732},
+  url       = {https://github.com/Gokaran-Shukla/risb-wannier}
+}
+```
+
+GitHub's **"Cite this repository"** button (from `CITATION.cff`) gives the same reference. Please also cite the method papers:
 
 - N. Lanatà, Y. Yao, C.-Z. Wang, K.-M. Ho, G. Kotliar, Phys. Rev. X **5**, 011008 (2015)
 - F. Lechermann, A. Georges, G. Kotliar, O. Parcollet, Phys. Rev. B **76**, 155102 (2007)

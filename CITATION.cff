@@ -16,6 +16,11 @@ authors:
     orcid: "https://orcid.org/0000-0001-9332-3332"
     affiliation: "King Abdullah University of Science and Technology (KAUST)"
     email: gokaran.shukla@kaust.edu.sa
+doi: "10.5281/zenodo.24334732"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24334732"
+    description: "Zenodo archive of version 1.2.0"
 repository-code: "https://github.com/Gokaran-Shukla/risb-wannier"
 license: MIT
 version: 1.2.0
