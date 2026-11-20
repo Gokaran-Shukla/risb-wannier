@@ -1,5 +1,7 @@
 # risb-wannier
 
+📘 **Complete manual (PDF):** [docs/risb-wannier_manual.pdf](docs/risb-wannier_manual.pdf) — documentation, tutorials and quizzes in one file.
+
 **Rotationally invariant slave-boson (RISB) / multi-orbital Gutzwiller solver on Wannier90 Hamiltonians,
 with approximate charge self-consistency and multi-core parallelism. Pure Python (NumPy + SciPy).**
 
